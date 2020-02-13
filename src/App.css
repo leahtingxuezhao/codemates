@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+.header-box {
+  width: 100vw;
+  height: 10vh;
+  background-color: rgb(114, 159, 255);
+}
+
+.nav-bar {
+  margin-left: 35vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-button {
+}
