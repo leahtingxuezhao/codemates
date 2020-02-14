@@ -5,6 +5,8 @@ import EventsMain from "./Components/EventsMain";
 import Auth from "./Components/Auth";
 import PlaygroundsMain from "./Components/PlaygroundsMain";
 import ProjectsMain from "./Components/ProjectsMain";
+import NewPost from "./Components/NewPost";
+import NewProject from "./Components/NewProject";
 
 export default (
   <Switch>
@@ -13,5 +15,7 @@ export default (
     <Route exact path="/auth" component={Auth} />
     <Route path="/playgrounds" component={PlaygroundsMain} />
     <Route path="/projects" component={ProjectsMain} />
+    <Route path="/newpost" component={NewPost} />
+    <Route path="/newproject" component={NewProject} />
   </Switch>
 );

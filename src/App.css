@@ -5,7 +5,7 @@
 .header-box {
   width: 100vw;
   height: 10vh;
-  background-color: rgb(114, 159, 255);
+  background-color: rgb(124, 159, 255);
   display: flex;
 }
 
@@ -50,7 +50,7 @@
 .login-box {
   width: 23vw;
   height: 60vh;
-  background-color: rgb(114, 159, 255);
+  background-color: rgb(124, 159, 255);
   border-radius: 20px;
 }
 
@@ -59,4 +59,17 @@
   height: 60vh;
   background-color: yellow;
   border-radius: 20px;
+}
+
+.post-box {
+  width: 40vw;
+  height: 50vh;
+  margin: auto;
+  background-color: antiquewhite;
+}
+
+.homepage-p {
+  margin-top: 50px;
+  font-size: 35px;
+  font-weight: bold;
 }

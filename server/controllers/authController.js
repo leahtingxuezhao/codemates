@@ -35,6 +35,7 @@ module.exports = {
     }
     delete user.hash;
     req.session.user = user;
+    console.log("this is user :", user);
     res.status(200).send(req.session.user);
   },
   logout: (req, res) => {

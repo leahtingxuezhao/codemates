@@ -5,6 +5,8 @@ const massive = require("massive");
 const app = express();
 const { SESSION_SECRET, CONNECTION_STRING, SERVER_PORT } = process.env;
 const authCtrl = require("./controllers/authController");
+const postCtrl = require("./controllers/postController");
+const projectCtrl = require("./controllers/projectController");
 
 app.use(express.json());
 app.use(
@@ -32,3 +34,9 @@ app.post("/auth/register", authCtrl.register);
 app.post("/auth/login", authCtrl.login);
 app.post("/auth/logout", authCtrl.logout);
 app.get("/auth/user", authCtrl.getUser);
+
+//post endpoints
+app.post("/api/create_post", postCtrl.createPost);
+
+//project endpoints
+app.post("/api/create_project", projectCtrl.createProject);

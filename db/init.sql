@@ -18,7 +18,8 @@ CREATE TABLE codemates_posts
 (post_id SERIAL PRIMARY KEY,
 user_id INTEGER REFERENCES codemates_users(user_id),
 post_title TEXT,
-content TEXT);
+content TEXT,
+post_image TEXT);
 
 SELECT * FROM codemates_posts;
 

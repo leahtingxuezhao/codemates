@@ -1,7 +1,21 @@
-import React from "react";
+import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 
-function PlaygroundsMain(props) {
-  return <div>Playgrounds</div>;
+class PlaygroundsMain extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return (
+      <div>
+        <div>Playgrounds</div>
+        <button onClick={() => this.props.history.push("/newpost")}>
+          New Post
+        </button>
+      </div>
+    );
+  }
 }
 
-export default PlaygroundsMain;
+export default withRouter(PlaygroundsMain);
