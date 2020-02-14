@@ -10,7 +10,7 @@ export default (
   <Switch>
     <Route exact path="/" component={Home} />
     <Route path="/events" component={EventsMain} />
-    <Route path="/auth" component={Auth} />
+    <Route exact path="/auth" component={Auth} />
     <Route path="/playgrounds" component={PlaygroundsMain} />
     <Route path="/projects" component={ProjectsMain} />
   </Switch>

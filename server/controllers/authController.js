@@ -8,10 +8,16 @@ module.exports = {
     if (result[0]) {
       return res.status(409).send("User already registered.");
     }
+    console.log("result :", result);
     const salt = bcrypt.genSaltSync(10);
+    console.log("password :", password);
+    console.log("username :", username);
     const hash = bcrypt.hashSync(password, salt);
     const user = await db.register_user([username, email, hash, profile_pic]);
-    delete user[0].hash;
+    console.log("user :", user);
+    if (user[0]) {
+      delete user[0].hash;
+    }
     req.session.user = user[0];
     res.status(200).send(req.session.user);
   },
