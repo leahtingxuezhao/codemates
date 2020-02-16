@@ -9,7 +9,13 @@ class SinglePost extends Component {
 
   render() {
     const { title, username, profile_pic } = this.props;
-    return <div>{title}</div>;
+    return (
+      <div className="postBox">
+        <div>{title}</div>
+        <div>{username}</div>
+        <div>{profile_pic}</div>
+      </div>
+    );
   }
 }
 

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
-import { getUser } from "../redux/authReducer";
 import SinglePost from "./SinglePost";
 
 class PlaygroundsMain extends Component {
@@ -25,12 +24,13 @@ class PlaygroundsMain extends Component {
     let postList = this.state.posts.map(element => {
       return (
         <SinglePost
-          title={element.title}
+          title={element.post_title}
           username={element.username}
           profile_pic={element.profile_pic}
         />
       );
     });
+    console.log("postList :", postList);
     return (
       <div>
         <div>Playgrounds</div>
