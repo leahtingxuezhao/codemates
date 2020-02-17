@@ -8,12 +8,30 @@ class SinglePost extends Component {
   }
 
   render() {
-    const { title, username, profile_pic } = this.props;
+    const {
+      index,
+      id,
+      title,
+      username,
+      profile_pic,
+      content,
+      image
+    } = this.props;
+
     return (
-      <div className="postBox">
+      <div
+        className="postBox"
+        onClick={() =>
+          this.props.history.push({
+            pathname: `/post/${id}`,
+            state: { index, id, title, username, profile_pic, content, image }
+          })
+        }
+      >
         <div>{title}</div>
         <div>{username}</div>
         <div>{profile_pic}</div>
+        <div>{content}</div>
       </div>
     );
   }

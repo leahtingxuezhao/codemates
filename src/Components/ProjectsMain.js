@@ -25,10 +25,13 @@ class ProjectsMain extends Component {
     let projectList = this.state.projects.map(element => {
       return (
         <SingleProject
+          id={element.project_id}
           title={element.project_title}
           languages={element.project_languages}
           username={element.username}
           profile_pic={element.profile_pic}
+          user_id={element.user_id}
+          description={element.project_description}
         />
       );
     });

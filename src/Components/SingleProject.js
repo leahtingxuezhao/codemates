@@ -8,9 +8,33 @@ class SingleProject extends Component {
   }
 
   render() {
-    const { title, username, profile_pic, languages } = this.props;
+    const {
+      id,
+      title,
+      username,
+      profile_pic,
+      languages,
+      user_id,
+      description
+    } = this.props;
     return (
-      <div className="postBox">
+      <div
+        className="postBox"
+        onClick={() =>
+          this.props.history.push({
+            pathname: `/project/${id}`,
+            state: {
+              title,
+              username,
+              profile_pic,
+              languages,
+              description,
+              id,
+              user_id
+            }
+          })
+        }
+      >
         <div>{title}</div>
         <div>{username}</div>
         <div>{profile_pic}</div>

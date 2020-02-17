@@ -21,15 +21,21 @@ class PlaygroundsMain extends Component {
   }
 
   render() {
-    let postList = this.state.posts.map(element => {
+    let postList = this.state.posts.map((element, index) => {
       return (
         <SinglePost
+          index={index}
+          content={element.content}
+          image={element.post_image}
+          id={element.post_id}
           title={element.post_title}
           username={element.username}
           profile_pic={element.profile_pic}
+          user_id={element.user_id}
         />
       );
     });
+
     console.log("postList :", postList);
     return (
       <div>
