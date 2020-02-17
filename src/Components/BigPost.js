@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { pathOr } from "ramda";
+import { GET_USER } from "../redux/authReducer";
 class BigPost extends Component {
   constructor(props) {
     super(props);
@@ -8,8 +9,6 @@ class BigPost extends Component {
   }
 
   render() {
-    const editButton = () => {};
-
     console.log(
       "this.props.history.location.state :",
       this.props.history.location.state
