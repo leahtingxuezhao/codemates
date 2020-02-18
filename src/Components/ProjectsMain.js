@@ -22,9 +22,10 @@ class ProjectsMain extends Component {
   }
 
   render() {
-    let projectList = this.state.projects.map(element => {
+    let projectList = this.state.projects.map((element, index) => {
       return (
         <SingleProject
+          index={index}
           id={element.project_id}
           title={element.project_title}
           languages={element.project_languages}

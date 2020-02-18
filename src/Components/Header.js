@@ -12,25 +12,25 @@ function Header(props) {
         <div className="nav-bar">
           <div
             onClick={() => props.history.push("/playgrounds")}
-            className="nav-button"
+            className="nav-title"
           >
             Playgrounds
           </div>
           <div
             onClick={() => props.history.push("/projects")}
-            className="nav-button"
+            className="nav-title"
           >
             Projects
           </div>
           <div
             onClick={() => props.history.push("/events")}
-            className="nav-button"
+            className="nav-title"
           >
             Events
           </div>
           <div
             onClick={() => props.history.push("/auth")}
-            className="nav-button"
+            className="nav-title"
           >
             GET STARTED
           </div>

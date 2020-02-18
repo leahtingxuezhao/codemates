@@ -10,8 +10,9 @@
 }
 
 .company_name {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
+  margin-left: 20px;
 }
 
 .nav-wrap {
@@ -25,6 +26,10 @@
   position: relative;
   display: flex;
   justify-content: space-evenly;
+}
+
+.nav-title {
+  font-size: 20px;
 }
 
 #logo {
@@ -71,6 +76,38 @@
   font-weight: bold;
 }
 
+.mission-box {
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  color: darkblue;
+}
+
 .postBox {
   display: flex;
+}
+
+#homepagePicture {
+  width: 100vw;
+}
+
+.threeFunctions {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 30vh;
+  margin-top: 10vh;
+}
+
+.function-image {
+  width: 25vw;
+}
+.project-image {
+  width: 20vw;
+}
+
+.playgrounds-home {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 8vh;
 }

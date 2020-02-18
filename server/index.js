@@ -39,8 +39,10 @@ app.get("/auth/user", authCtrl.getUser);
 app.post("/api/create_post", postCtrl.createPost);
 app.get("/api/get_posts", postCtrl.getPosts);
 app.get("/api/get_post/:id", postCtrl.getPost);
+app.delete("/api/delete_post/:id", postCtrl.deletePost);
 
 //project endpoints
 app.post("/api/create_project", projectCtrl.createProject);
 app.get("/api/get_projects", projectCtrl.getProjects);
 app.get("/api/get_project/:id", projectCtrl.getProject);
+app.delete("/api/delete_project/:id", projectCtrl.deleteProject);

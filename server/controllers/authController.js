@@ -43,6 +43,7 @@ module.exports = {
     res.sendStatus(200);
   },
   getUser: (req, res) => {
+    console.log("req", req);
     if (!req.session.user) {
       return res.status(401).send("No user found");
     } else {

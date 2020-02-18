@@ -13,6 +13,7 @@ class SinglePost extends Component {
       id,
       title,
       username,
+      user_id,
       profile_pic,
       content,
       image
@@ -24,7 +25,16 @@ class SinglePost extends Component {
         onClick={() =>
           this.props.history.push({
             pathname: `/post/${id}`,
-            state: { index, id, title, username, profile_pic, content, image }
+            state: {
+              index,
+              id,
+              title,
+              username,
+              user_id,
+              profile_pic,
+              content,
+              image
+            }
           })
         }
       >

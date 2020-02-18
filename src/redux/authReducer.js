@@ -44,11 +44,13 @@ export function getUser() {
 export default function authReducer(state = initialState, action) {
   const { type, payload } = action;
   console.log("type", type);
+  console.log("payload", payload);
+
   switch (type) {
     case GET_USER:
       return Object.assign({ ...state }, { user: payload });
     case SET_USER:
-      return Object.assign({ ...state }, { posts: payload });
+      return Object.assign({ ...state }, { user: payload });
     case LOGOUT:
       return Object.assign({ ...state }, { posts: payload });
     default:

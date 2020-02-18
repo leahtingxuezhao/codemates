@@ -11,6 +11,10 @@ class PlaygroundsMain extends Component {
     };
   }
   componentDidMount() {
+    this.reRender();
+  }
+
+  reRender = () => {
     axios
       .get("/api/get_posts")
       .then(res => {
@@ -18,7 +22,7 @@ class PlaygroundsMain extends Component {
         this.setState({ posts: res.data });
       })
       .catch(err => console.log(err));
-  }
+  };
 
   render() {
     let postList = this.state.posts.map((element, index) => {

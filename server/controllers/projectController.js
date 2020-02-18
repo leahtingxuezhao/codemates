@@ -28,5 +28,10 @@ module.exports = {
         res.status(200).send(results);
       })
       .catch(err => res.status(500).send(err));
+  },
+  deleteProject: (req, res) => {
+    const db = req.app.get("db");
+    const { id } = req.params;
+    db.delete_project(Number(id)).then(data => res.sendStatus(200));
   }
 };
