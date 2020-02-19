@@ -11,7 +11,11 @@ class BigPost extends Component {
     super(props);
     this.state = {
       comment: "",
-      comments: []
+      comments: [],
+      isVisible: false,
+      post_title: "",
+      content: "'",
+      post_image: ""
     };
   }
 
@@ -39,6 +43,14 @@ class BigPost extends Component {
     });
   };
 
+  updatePost = (id, post_title, content, post_image) => {
+    axios
+      .put(`/api/update_post/${id}`, { post_title, content, post_image })
+      .then(() => {
+        this.setState({ isVisible: false });
+      });
+  };
+
   createComment = (user_id, post_id, comment) => {
     const { id } = pathOr({}, ["history", "location", "state"], this.props);
     console.log("create comment id", post_id);
@@ -56,6 +68,11 @@ class BigPost extends Component {
       [name]: value
     });
   };
+
+  toggle() {
+    this.setState({ isVisible: !this.state.isVisible });
+    console.log("after click isVisible :", this.state.isVisible);
+  }
 
   render() {
     console.log(
@@ -77,17 +94,67 @@ class BigPost extends Component {
       console.log("user.id :", user);
       console.log("user :", user);
 
+      console.log("original isVisible :", this.state.isVisible);
+
+      const editBox = () => {
+        const { post_title, content, post_image } = this.state;
+        if (this.state.isVisible) {
+          return (
+            <div>
+              <div>
+                <p>New Title</p>
+                <input
+                  placeholder="title"
+                  name="post_title"
+                  onChange={e => this.handleChange(e)}
+                ></input>
+              </div>
+              <div>
+                <p>New Content</p>
+                <input
+                  placeholder="content"
+                  name="content"
+                  onChange={e => this.handleChange(e)}
+                ></input>
+              </div>
+              <div>
+                <p>New Image Address</p>
+                <textarea
+                  placeholder="image"
+                  name="post_image"
+                  onChange={e => this.handleChange(e)}
+                ></textarea>
+              </div>
+              <button
+                onClick={() => this.updatePost(post_title, content, post_image)}
+              >
+                Update
+              </button>
+            </div>
+          );
+        }
+      };
+
       if (user === user_id) {
         return (
-          <div>
-            <button>Edit</button>
+          <div className="update-button">
             <button
+              className="button-p"
+              onClick={() => {
+                this.toggle();
+              }}
+            >
+              Edit Post
+            </button>
+            <div>{editBox()}</div>
+            <button
+              className="button-p"
               onClick={() => {
                 console.log("this.props :", this.props);
                 this.deletePost(id);
               }}
             >
-              Delete
+              Delete Post
             </button>
           </div>
         );
@@ -123,15 +190,19 @@ class BigPost extends Component {
     });
 
     console.log(this.state.comment);
+    console.log("this.state.post_image :", this.state.post_image);
+    console.log("this.state.content :", this.state.content);
+    console.log("this.state.post_title :", this.state.post_title);
 
     return (
       <div>
         <img src={bigPostImage} alt="bigPost" className="bigPostImage"></img>
         <div className="postArea">
-          <div>{title}</div>
-          <div>{username}</div>
-          <div>{content}</div>
-          <img src={image} alt="post-image"></img>
+          <div>TITLE: {title}</div>
+          <div>By user {username}</div>
+          <img src={image} alt="post-image" className="post-image"></img>
+          <div className="post-content">POST CONTENT: {content}</div>
+
           <div>{editButton()}</div>
         </div>
         <div>{commentArea()}</div>

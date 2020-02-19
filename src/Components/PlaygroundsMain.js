@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
 import SinglePost from "./SinglePost";
+import bigPostImage from "../image_folder/bigPost.jpeg";
 
 class PlaygroundsMain extends Component {
   constructor(props) {
@@ -44,6 +45,7 @@ class PlaygroundsMain extends Component {
     console.log("postList :", postList);
     return (
       <div className="post-background">
+        <img src={bigPostImage} alt="bigPost" className="bigPostImage"></img>
         <div>Playgrounds</div>
         <button onClick={() => this.props.history.push("/newpost")}>
           New Post

@@ -43,6 +43,7 @@ app.get("/api/get_post/:id", postCtrl.getPost);
 app.delete("/api/delete_post/:id", postCtrl.deletePost);
 app.post("/api/create_comment", postCtrl.createComment);
 app.get("/api/get_comments/:id", postCtrl.getComments);
+app.put("/api/update_post/:id", postCtrl.updatePost);
 
 //project endpoints
 app.post("/api/create_project", projectCtrl.createProject);

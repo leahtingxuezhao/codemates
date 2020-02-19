@@ -129,7 +129,7 @@
 }
 
 .bigPostImage {
-  width: 70vw;
+  width: 50vw;
 }
 
 .post-userPic {
@@ -141,9 +141,35 @@
 }
 
 .postArea {
-  width: 50vw;
+  width: 40vw;
   box-shadow: 5px 2px 5px 2px gray;
   margin: auto;
   margin-top: 5vh;
   border-radius: 10px;
+}
+
+.post-image {
+  width: 35vw;
+  margin: auto;
+}
+
+.post-content {
+  margin: 5vh;
+}
+
+.update-button {
+  width: 30vw;
+  margin: auto;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+}
+
+.button-p {
+  width: 8vw;
+  height: 5vh;
+  background-color: rgb(124, 159, 255);
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
 }
