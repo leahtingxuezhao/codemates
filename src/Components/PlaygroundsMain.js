@@ -26,6 +26,7 @@ class PlaygroundsMain extends Component {
 
   render() {
     let postList = this.state.posts.map((element, index) => {
+      console.log("element :", element);
       return (
         <SinglePost
           index={index}
@@ -42,7 +43,7 @@ class PlaygroundsMain extends Component {
 
     console.log("postList :", postList);
     return (
-      <div>
+      <div className="post-background">
         <div>Playgrounds</div>
         <button onClick={() => this.props.history.push("/newpost")}>
           New Post

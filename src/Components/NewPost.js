@@ -19,9 +19,9 @@ class NewPost extends Component {
     });
   };
 
-  submit = (post_title, content, post_imag) => {
+  submit = (post_title, content, post_image) => {
     axios
-      .post("/api/create_post", { post_title, content, post_imag })
+      .post("/api/create_post", { post_title, content, post_image })
       .then(() => {
         this.props.history.push("/playgrounds");
       });

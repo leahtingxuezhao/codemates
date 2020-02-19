@@ -1,13 +1,17 @@
 import React from "react";
 import { withRouter, Link } from "react-router-dom";
+import logo from "../image_folder/logo.png";
 
 function Header(props) {
   console.log(props);
   return (
     <div className="header-box">
       <div className="nav-wrap">
-        <div className="company_name" onClick={() => props.history.push("/")}>
-          CODEMATES
+        <div className="logo-box">
+          <img src={logo} alt="logo" className="header-logo"></img>
+          <div className="company_name" onClick={() => props.history.push("/")}>
+            CODEMATES
+          </div>
         </div>
         <div className="nav-bar">
           <div

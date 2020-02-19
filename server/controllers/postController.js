@@ -7,6 +7,15 @@ module.exports = {
       res.sendStatus(200)
     );
   },
+
+  createComment: (req, res) => {
+    const db = req.app.get("db");
+    const { user_id, post_id, comment } = req.body;
+    db.create_comment(user_id, post_id, comment).then(() =>
+      res.sendStatus(200)
+    );
+  },
+
   getPost: (req, res) => {
     const db = req.app.get("db");
     const { id } = req.params;
@@ -14,6 +23,16 @@ module.exports = {
       const data = response[0];
       res.status(200).send(data);
     });
+  },
+
+  getComments: (req, res) => {
+    const db = req.app.get("db");
+    const { id } = req.params;
+    db.get_comments(Number(id))
+      .then(results => {
+        res.status(200).send(results);
+      })
+      .catch(err => res.status(500).send(err));
   },
 
   getPosts: (req, res) => {

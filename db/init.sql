@@ -34,3 +34,10 @@ project_description TEXT,
 project_languages TEXT);
 
 SELECT * FROM codemates_projects;
+
+DROP TABLE IF EXISTS comments;
+CREATE TABLE comments
+(comment_id SERIAL PRIMARY KEY,
+user_id INTEGER REFERENCES codemates_users(user_id),
+post_id INTEGER REFERENCES codemates_posts,
+comment TEXT)

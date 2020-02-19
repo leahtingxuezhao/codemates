@@ -39,15 +39,20 @@ class Auth extends Component {
     axios
       .post("/auth/register", { username, email, password, profile_pic })
       .then(res => {
-        console.log("register, res : \n\n\n", res);
+        console.log("register, res :", res);
         this.props.setUser(res.data);
+        this.email(email);
         this.props.history.push("/");
       })
       .catch(err => {
         console.log(err);
       });
   };
-
+  email = email => {
+    axios.post("/auth/email", { email }).catch(err => {
+      console.log(err);
+    });
+  };
   handleChange = e => {
     const { name, value } = e.target;
     this.setState({

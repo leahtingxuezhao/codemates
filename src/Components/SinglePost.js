@@ -38,10 +38,12 @@ class SinglePost extends Component {
           })
         }
       >
-        <div>{title}</div>
-        <div>{username}</div>
-        <div>{profile_pic}</div>
-        <div>{content}</div>
+        <img src={profile_pic} alt="profile-pic" className="post-userPic"></img>
+        <div>By user {username}</div>
+        <div>
+          <div>{title}</div>
+          <div>{content}</div>
+        </div>
       </div>
     );
   }

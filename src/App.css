@@ -13,10 +13,11 @@
   font-size: 25px;
   font-weight: bold;
   margin-left: 20px;
+  margin-top: 10px;
 }
 
 .nav-wrap {
-  margin-top: 30px;
+  margin-top: 25px;
   display: flex;
   justify-content: space-between;
   width: 100vw;
@@ -30,13 +31,15 @@
 
 .nav-title {
   font-size: 20px;
-}
-
-#logo {
-  margin-left: 20px;
   margin-top: 10px;
+}
+.logo-box {
+  display: flex;
+}
+.header-logo {
+  margin-left: 20px;
+  margin-bottom: 20px;
   width: 50px;
-  height: 40px;
 }
 
 .auth-box {
@@ -84,7 +87,20 @@
 }
 
 .postBox {
+  background: linear-gradient(
+    90deg,
+    rgb(183, 233, 221) 0%,
+    rgb(176, 220, 243) 38%,
+    rgb(243, 255, 198) 100%
+  );
+  position: relative;
   display: flex;
+  height: 10vh;
+  width: 50vw;
+  margin-left: 25vw;
+  margin-top: 4vh;
+  border-radius: 10px;
+  box-shadow: rgb(129, 132, 133) 5px 5px 5px 3px;
 }
 
 #homepagePicture {
@@ -110,4 +126,24 @@
   display: flex;
   justify-content: space-evenly;
   margin-top: 8vh;
+}
+
+.bigPostImage {
+  width: 70vw;
+}
+
+.post-userPic {
+  margin-left: 1vw;
+  margin-top: 1vh;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.postArea {
+  width: 50vw;
+  box-shadow: 5px 2px 5px 2px gray;
+  margin: auto;
+  margin-top: 5vh;
+  border-radius: 10px;
 }

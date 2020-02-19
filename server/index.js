@@ -34,12 +34,15 @@ app.post("/auth/register", authCtrl.register);
 app.post("/auth/login", authCtrl.login);
 app.post("/auth/logout", authCtrl.logout);
 app.get("/auth/user", authCtrl.getUser);
+app.post("/auth/email", authCtrl.email);
 
 //post endpoints
 app.post("/api/create_post", postCtrl.createPost);
 app.get("/api/get_posts", postCtrl.getPosts);
 app.get("/api/get_post/:id", postCtrl.getPost);
 app.delete("/api/delete_post/:id", postCtrl.deletePost);
+app.post("/api/create_comment", postCtrl.createComment);
+app.get("/api/get_comments/:id", postCtrl.getComments);
 
 //project endpoints
 app.post("/api/create_project", projectCtrl.createProject);
