@@ -53,7 +53,10 @@ module.exports = {
     const db = req.app.get("db");
     const { id } = req.params;
     const { post_title, content, post_image } = req.body;
-
+    console.log("post_title :", post_title);
+    console.log("content :", content);
+    console.log("post_image :", post_image);
+    console.log("id :", id);
     db.update_post(id, post_title, content, post_image).then(() =>
       res.sendStatus(200)
     );

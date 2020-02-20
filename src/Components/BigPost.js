@@ -9,13 +9,22 @@ import SingleComment from "./SingleComment";
 class BigPost extends Component {
   constructor(props) {
     super(props);
+    const { title, content, username, image } = pathOr(
+      {},
+      ["history", "location", "state"],
+      this.props
+    );
     this.state = {
       comment: "",
       comments: [],
       isVisible: false,
       post_title: "",
-      content: "'",
-      post_image: ""
+      content: "",
+      post_image: "",
+      displayTitle: title,
+      displayContent: content,
+      displayPostImage: image,
+      displayUsername: username
     };
   }
 
@@ -43,11 +52,17 @@ class BigPost extends Component {
     });
   };
 
-  updatePost = (id, post_title, content, post_image) => {
+  updatePost = (post_title, content, post_image) => {
+    const { id } = pathOr({}, ["history", "location", "state"], this.props);
     axios
       .put(`/api/update_post/${id}`, { post_title, content, post_image })
       .then(() => {
-        this.setState({ isVisible: false });
+        this.setState({
+          isVisible: false,
+          displayTitle: post_title,
+          displayContent: content,
+          displayPostImage: post_image
+        });
       });
   };
 
@@ -75,6 +90,7 @@ class BigPost extends Component {
   }
 
   render() {
+    const renderContent = props => {};
     console.log(
       "this.props.history.location.state :",
       this.props.history.location.state
@@ -193,15 +209,24 @@ class BigPost extends Component {
     console.log("this.state.post_image :", this.state.post_image);
     console.log("this.state.content :", this.state.content);
     console.log("this.state.post_title :", this.state.post_title);
-
+    const {
+      displayContent,
+      displayPostImage,
+      displayTitle,
+      displayUsername
+    } = this.state;
     return (
       <div>
         <img src={bigPostImage} alt="bigPost" className="bigPostImage"></img>
         <div className="postArea">
-          <div>TITLE: {title}</div>
-          <div>By user {username}</div>
-          <img src={image} alt="post-image" className="post-image"></img>
-          <div className="post-content">POST CONTENT: {content}</div>
+          <div>TITLE: {displayTitle}</div>
+          <div>By user {displayUsername}</div>
+          <img
+            src={displayPostImage}
+            alt="post-image"
+            className="post-image"
+          ></img>
+          <div className="post-content">POST CONTENT: {displayContent}</div>
 
           <div>{editButton()}</div>
         </div>
