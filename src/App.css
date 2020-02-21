@@ -173,3 +173,14 @@
   font-size: 20px;
   font-weight: bold;
 }
+
+.event-box {
+  height: 50vh;
+  width: 40vw;
+  margin: auto;
+  margin-top: 8vh;
+}
+
+.event-image {
+  width: 30vw;
+}
