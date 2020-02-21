@@ -9,6 +9,7 @@ import NewPost from "./Components/NewPost";
 import NewProject from "./Components/NewProject";
 import BigPost from "./Components/BigPost";
 import BigProject from "./Components/BigProject";
+import Chat from "./Components/Chat";
 
 export default (
   <Switch>
@@ -21,5 +22,6 @@ export default (
     <Route path="/newproject" component={NewProject} />
     <Route path="/post/:id" component={BigPost} />
     <Route path="/project/:id" component={BigProject} />
+    <Route path="/chat/:user_id/:user/:username" component={Chat} />
   </Switch>
 );

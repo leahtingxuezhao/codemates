@@ -7,6 +7,7 @@ const { SESSION_SECRET, CONNECTION_STRING, SERVER_PORT } = process.env;
 const authCtrl = require("./controllers/authController");
 const postCtrl = require("./controllers/postController");
 const projectCtrl = require("./controllers/projectController");
+const messageController = require("./controllers/messageController");
 
 app.use(express.json());
 app.use(
@@ -21,10 +22,21 @@ app.use(
 massive(CONNECTION_STRING)
   .then(db => {
     app.set("db", db);
-    console.log("Database connected");
-    app.listen(SERVER_PORT, () =>
-      console.log(`Server listening on ${SERVER_PORT}`)
+    console.log("db is ready");
+    const io = require("socket.io")(
+      app.listen(SERVER_PORT, () =>
+        console.log(`server is listening on port: ${SERVER_PORT}`)
+      )
     );
+    io.on("connection", socket => {
+      const db = app.get("db");
+      socket.on("message to server", body =>
+        messageController.messageToServer(body, io, socket, db, session)
+      );
+      socket.on("join", body =>
+        messageController.checkForChatroom(body, io, socket, db, session)
+      );
+    });
   })
   .catch(err => console.log(err));
 

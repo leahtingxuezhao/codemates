@@ -11,6 +11,23 @@ class BigProject extends Component {
     this.state = {};
   }
 
+  messageUser = () => {
+    const { username, user_id } = pathOr(
+      {},
+      ["history", "location", "state"],
+      this.props
+    );
+
+    const user = this.props.user.user_id;
+    const user_name = this.props.user.username;
+    console.log("APPLE ID :", user);
+    console.log("THIS IS LEAH :", username);
+    console.log("This is apple :", user_name);
+    console.log("Leah ID:", user_id);
+
+    this.props.history.push(`/chat/${user_id}/${user}/${username}`);
+  };
+
   deleteProject = id => {
     console.log("delete project id", id);
     axios.delete(`/api/delete_project/${id}`).then(() => {
@@ -35,9 +52,13 @@ class BigProject extends Component {
     } = pathOr({}, ["history", "location", "state"], this.props);
 
     const user = this.props.user.user_id;
+    const user_name = this.props.user.username;
+
     const editButton = () => {
-      console.log("user.id :", user);
-      console.log("user :", user);
+      console.log("CURRENT USER APPLE ID :", user);
+      console.log("THIS IS LEAH :", username);
+      console.log("Leah ID:", user_id);
+      console.log("This is apple :", user_name);
 
       if (user === user_id) {
         return (
@@ -51,6 +72,12 @@ class BigProject extends Component {
             >
               Delete
             </button>
+          </div>
+        );
+      } else {
+        return (
+          <div>
+            <button onClick={this.messageUser}>Message {username}</button>
           </div>
         );
       }

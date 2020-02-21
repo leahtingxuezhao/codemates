@@ -41,3 +41,21 @@ CREATE TABLE comments
 user_id INTEGER REFERENCES codemates_users(user_id),
 post_id INTEGER REFERENCES codemates_posts,
 comment TEXT)
+
+CREATE TABLE chatrooms (
+    chatroom_id SERIAL PRIMARY KEY
+);
+
+CREATE TABLE chat_junc (
+    chat_junc_id SERIAL PRIMARY KEY,
+    chatroom_id INT REFERENCES chatrooms(chatroom_id),
+    user_id INT REFERENCES codemates_users(user_id)
+);
+
+CREATE TABLE messages (
+    message_id SERIAL PRIMARY KEY,
+    chatroom_id INT REFERENCES chatrooms(chatroom_id),
+    user_id INT REFERENCES codemates_users(user_id),
+    message VARCHAR(500),
+    username VARCHAR(500) 
+)

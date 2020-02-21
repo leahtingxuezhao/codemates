@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import axios from "axios";
 
 class SingleProject extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      user: ""
+    };
   }
 
   render() {
