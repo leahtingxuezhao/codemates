@@ -1,17 +1,20 @@
 module.exports = {
   async messageToServer(body, io, socket, db) {
-    console.log(body);
     const { chatroom_id, user_id, message, username } = body;
-    let newMessage = await db.create_message(
-      chatroom_id,
-      +user_id,
-      message,
-      username
-    );
+    console.log(body);
+    let newMessage = await db.create_message(chatroom_id, +user_id, message);
     console.log(newMessage);
 
     io.in(chatroom_id).emit("incoming", newMessage);
   },
+
+  async deleteMessage(body, io, socket, db) {
+    const { message_id, chatroom_id } = body;
+    let deletedMessages = await db.delete_message(message_id, chatroom_id);
+    console.log(deletedMessages);
+    io.in(chatroom_id).emit("delete message", deletedMessages);
+  },
+
   async joinRoom(body, io, socket, db) {
     const { chatroom_id, chatroomMessages } = body;
     socket.join(chatroom_id);

@@ -40,6 +40,9 @@ massive(CONNECTION_STRING)
       socket.on("join", body =>
         messageController.checkForChatroom(body, io, socket, db, session)
       );
+      socket.on("delete message", body =>
+        messageController.deleteMessage(body, io, socket, db, session)
+      );
     });
   })
   .catch(err => console.log(err));

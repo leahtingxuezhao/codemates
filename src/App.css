@@ -87,15 +87,17 @@
 }
 
 .postBox {
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgb(183, 233, 221) 0%,
     rgb(176, 220, 243) 38%,
     rgb(243, 255, 198) 100%
-  );
+  ); */
+
+  background-color: rgb(196, 214, 246);
   position: relative;
   display: flex;
-  height: 10vh;
+  height: 12vh;
   width: 50vw;
   margin-left: 25vw;
   margin-top: 4vh;
@@ -133,11 +135,22 @@
 }
 
 .post-userPic {
-  margin-left: 1vw;
-  margin-top: 1vh;
-  width: 80px;
-  height: 80px;
+  width: 5vw;
+  height: 8vh;
   border-radius: 50%;
+}
+
+.user-box {
+  margin-top: 1vh;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1vw;
+}
+
+.user-name {
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .postArea {

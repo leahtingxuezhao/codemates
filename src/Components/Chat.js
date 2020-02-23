@@ -27,6 +27,9 @@ function Chat(props) {
       console.log(body);
       updateMessages((messages = [body[0], ...messages]));
     });
+    socket.on("delete message", messages => {
+      updateMessages(messages);
+    });
   }, []);
   function messageToServer() {
     const { username, user } = props.match.params;
@@ -38,6 +41,13 @@ function Chat(props) {
     });
     handleChange("");
   }
+  function deleteMessage(id) {
+    socket.emit("delete message", {
+      message_id: id,
+      chatroom_id
+    });
+  }
+
   return (
     <div className="chat">
       <div className="messages" id="style-2">
