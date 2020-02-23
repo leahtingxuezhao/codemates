@@ -1,5 +1,5 @@
 import React from "react";
-import homepageImage from "/Users/dt/repos-2/devMountain/Codemates/codemates/src/image_folder/homepage.jpeg";
+import homepageImage from "../../src/image_folder/homepage.jpeg";
 import eventsImage from "../image_folder/events.jpeg";
 import playgroundsImage from "../image_folder/playgrounds.png";
 import projectsImage from "../image_folder/projects.jpeg";

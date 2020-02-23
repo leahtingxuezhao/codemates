@@ -10,6 +10,10 @@ const projectCtrl = require("./controllers/projectController");
 const messageController = require("./controllers/messageController");
 
 app.use(express.json());
+
+// server static files when hitting the server
+app.use(express.static("build"));
+
 app.use(
   session({
     secret: SESSION_SECRET,
