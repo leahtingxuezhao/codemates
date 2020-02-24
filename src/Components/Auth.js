@@ -4,6 +4,7 @@ import axios from "axios";
 import { setUser } from "../redux/authReducer";
 import authPic from "../image_folder/authPic.jpeg";
 import welcome from "../image_folder/welcome.jpeg";
+import registerImage from "../image_folder/registerImage.jpeg";
 class Auth extends Component {
   constructor(props) {
     super(props);
@@ -75,13 +76,13 @@ class Auth extends Component {
           <div className="login-box">
             <p className="auth-title">WELCOME BACK!</p>
             <img src={welcome} alt="welcome" className="welcome"></img>
-            <div className="auth-title">NAME:</div>
+            <div className="auth-small-title">NAME :</div>
             <input
               name="username"
               placeholder="Username"
               onChange={e => this.handleChange(e)}
             ></input>
-            <div className="auth-title">PASSWORD:</div>
+            <div className="auth-small-title">PASSWORD :</div>
             <input
               name="password"
               onChange={e => this.handleChange(e)}
@@ -92,26 +93,27 @@ class Auth extends Component {
             </button>
           </div>
           <div className="register-box">
-            <p>Create Account</p>
-            <div>name</div>
+            <p className="auth-title">CREATE AN ACCOUNT :)</p>
+            <img src={registerImage} alt="register" className="welcome"></img>
+            <div className="auth-small-title">NAME :</div>
             <input
               name="username"
               placeholder="Username"
               onChange={e => this.handleChange(e)}
             ></input>
-            <div>Email address</div>
+            <div className="auth-small-title">EMAIL ADDRESS :</div>
             <input
               name="email"
               placeholder="Email"
               onChange={e => this.handleChange(e)}
             ></input>
-            <div>Password</div>
+            <div className="auth-small-title">PASSWORD :</div>
             <input
               name="password"
               onChange={e => this.handleChange(e)}
               placeholder="Password"
             ></input>
-            <div>Profile Picture</div>
+            <div className="auth-small-title">PROFILE PICTURE :</div>
             <input
               name="profile_pic"
               placeholder="image"

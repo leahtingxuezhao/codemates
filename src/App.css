@@ -57,13 +57,16 @@
   height: 60vh;
   background-color: rgb(255, 175, 2);
   border-radius: 20px;
+  box-shadow: 10px 15px 1px 10px rgb(178, 144, 255);
 }
 
 .register-box {
+  margin-left: 3vw;
   width: 32vw;
   height: 60vh;
   background-color: rgb(178, 144, 255);
   border-radius: 20px;
+  box-shadow: 10px 15px 1px 10px rgb(255, 175, 2);
 }
 
 .homepage-p {
@@ -347,5 +350,11 @@
 .auth-title {
   color: white;
   font-size: 25px;
+  font-weight: bold;
+}
+
+.auth-small-title {
+  color: white;
+  font-size: 15px;
   font-weight: bold;
 }
