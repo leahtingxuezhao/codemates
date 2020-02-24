@@ -7,9 +7,12 @@ function Chat(props) {
   const [input, handleChange] = useState("");
   let [messages, updateMessages] = useState([]);
   let [chatroom_id, updateChatroomId] = useState(0);
-  const socket = io.connect("http://localhost:3456");
-  console.log("this is props.match", props.match);
+  let [socket, startSocketConnection] = useState(null);
+
+  if (!socket) startSocketConnection(io.connect());
+  // console.log("this is props.match", props.match);
   useEffect(() => {
+    if (input.length > 0) return;
     if (props.match.params.user_id) {
       socket.emit("join", {
         user_id2: props.match.params.user_id,
@@ -23,6 +26,7 @@ function Chat(props) {
     });
   }, []);
   useEffect(() => {
+    if (input.length > 0) return;
     socket.on("incoming", body => {
       console.log(body);
       updateMessages((messages = [body[0], ...messages]));

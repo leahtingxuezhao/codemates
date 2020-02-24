@@ -35,7 +35,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start:stage": "node server/index.js"
+    "start:stage": "node server/index.js",
+    "dev": "npm run build && node server/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
