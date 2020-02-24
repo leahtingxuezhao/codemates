@@ -53,7 +53,7 @@ class NewProject extends Component {
           <img src={newImage3} className="newProjectImage"></img>
         </div>
         <div>
-          <div id="create-post">CREATE YOUR NEW PROJECT</div>
+          <div id="create-post">CREATE YOUR NEW PROJECT POST</div>
           <div className="post-box">
             <div className="addImage">
               <img src={addImage} alt="addImage"></img>

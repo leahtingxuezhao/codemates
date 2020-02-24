@@ -47,7 +47,7 @@
   width: 55vw;
   height: 60vh;
 
-  margin-top: 100px;
+  margin-top: 2vh;
 
   display: flex;
 }
@@ -55,14 +55,14 @@
 .login-box {
   width: 23vw;
   height: 60vh;
-  background-color: rgb(124, 159, 255);
+  background-color: rgb(255, 175, 2);
   border-radius: 20px;
 }
 
 .register-box {
   width: 32vw;
   height: 60vh;
-  background-color: yellow;
+  background-color: rgb(178, 144, 255);
   border-radius: 20px;
 }
 
@@ -337,4 +337,5 @@
 
 .newProjectPage {
   background-color: rgb(249, 249, 249);
+  height: 100vh;
 }

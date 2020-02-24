@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import axios from "axios";
 import { setUser } from "../redux/authReducer";
-
+import authPic from "../image_folder/authPic.jpeg";
 class Auth extends Component {
   constructor(props) {
     super(props);
@@ -68,56 +68,61 @@ class Auth extends Component {
     const { username, password, email, profile_pic } = this.state;
     const { push } = this.props.history;
     return (
-      <div className="auth-box">
-        <div className="login-box">
-          <p>Welcome Back!</p>
-          <div>name</div>
-          <input
-            name="username"
-            placeholder="Username"
-            onChange={e => this.handleChange(e)}
-          ></input>
-          <div>Password</div>
-          <input
-            name="password"
-            onChange={e => this.handleChange(e)}
-            placeholder="Password"
-          ></input>
-          <button onClick={() => this.login(username, password)}>Log in</button>
-        </div>
-        <div className="register-box">
-          <p>Create Account</p>
-          <div>name</div>
-          <input
-            name="username"
-            placeholder="Username"
-            onChange={e => this.handleChange(e)}
-          ></input>
-          <div>Email address</div>
-          <input
-            name="email"
-            placeholder="Email"
-            onChange={e => this.handleChange(e)}
-          ></input>
-          <div>Password</div>
-          <input
-            name="password"
-            onChange={e => this.handleChange(e)}
-            placeholder="Password"
-          ></input>
-          <div>Profile Picture</div>
-          <input
-            name="profile_pic"
-            placeholder="image"
-            onChange={e => this.handleChange(e)}
-          ></input>
-          <button
-            onClick={() =>
-              this.register(username, email, password, profile_pic)
-            }
-          >
-            Create new account
-          </button>
+      <div>
+        <img src={authPic} alt="authPic"></img>
+        <div className="auth-box">
+          <div className="login-box">
+            <p>Welcome Back!</p>
+            <div>name</div>
+            <input
+              name="username"
+              placeholder="Username"
+              onChange={e => this.handleChange(e)}
+            ></input>
+            <div>Password</div>
+            <input
+              name="password"
+              onChange={e => this.handleChange(e)}
+              placeholder="Password"
+            ></input>
+            <button onClick={() => this.login(username, password)}>
+              Log in
+            </button>
+          </div>
+          <div className="register-box">
+            <p>Create Account</p>
+            <div>name</div>
+            <input
+              name="username"
+              placeholder="Username"
+              onChange={e => this.handleChange(e)}
+            ></input>
+            <div>Email address</div>
+            <input
+              name="email"
+              placeholder="Email"
+              onChange={e => this.handleChange(e)}
+            ></input>
+            <div>Password</div>
+            <input
+              name="password"
+              onChange={e => this.handleChange(e)}
+              placeholder="Password"
+            ></input>
+            <div>Profile Picture</div>
+            <input
+              name="profile_pic"
+              placeholder="image"
+              onChange={e => this.handleChange(e)}
+            ></input>
+            <button
+              onClick={() =>
+                this.register(username, email, password, profile_pic)
+              }
+            >
+              Create new account
+            </button>
+          </div>
         </div>
       </div>
     );
