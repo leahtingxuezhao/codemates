@@ -339,3 +339,13 @@
   background-color: rgb(249, 249, 249);
   height: 100vh;
 }
+.welcome {
+  width: 16vh;
+  border-radius: 10px;
+}
+
+.auth-title {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}

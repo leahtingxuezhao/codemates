@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import axios from "axios";
 import { setUser } from "../redux/authReducer";
 import authPic from "../image_folder/authPic.jpeg";
+import welcome from "../image_folder/welcome.jpeg";
 class Auth extends Component {
   constructor(props) {
     super(props);
@@ -72,14 +73,15 @@ class Auth extends Component {
         <img src={authPic} alt="authPic"></img>
         <div className="auth-box">
           <div className="login-box">
-            <p>Welcome Back!</p>
-            <div>name</div>
+            <p className="auth-title">WELCOME BACK!</p>
+            <img src={welcome} alt="welcome" className="welcome"></img>
+            <div className="auth-title">NAME:</div>
             <input
               name="username"
               placeholder="Username"
               onChange={e => this.handleChange(e)}
             ></input>
-            <div>Password</div>
+            <div className="auth-title">PASSWORD:</div>
             <input
               name="password"
               onChange={e => this.handleChange(e)}
