@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { render } from "@testing-library/react";
 import axios from "axios";
+import newPostImage from "../image_folder/newpost-header.jpeg";
+import addImage from "../image_folder/add-picture.png";
 
 class NewPost extends Component {
   constructor(props) {
@@ -35,27 +37,37 @@ class NewPost extends Component {
 
     return (
       <div>
-        <div>NewPost</div>
+        <img src={newPostImage}></img>
+        <div id="create-post">CREATE YOUR NEW POST</div>
         <div className="post-box">
-          <div>Image GIF Video</div>
+          <div className="addImage">
+            <img src={addImage} alt="addImage"></img>
+          </div>
+          <div className="newpost-title">Image Address :</div>
           <input
             name="post_image"
             onChange={e => this.handleChange(e)}
             placeholder="image address"
+            className="post-input"
           ></input>
-          <div>Title</div>
+          <div className="newpost-title">Post Title :</div>
           <input
             name="post_title"
             onChange={e => this.handleChange(e)}
             placeholder="Post Title"
+            className="post-input"
           ></input>
-          <div>Content</div>
+          <div className="newpost-title">Post Content :</div>
           <textarea
             name="content"
             onChange={e => this.handleChange(e)}
             placeholder="Post Content"
+            className="newpost-content"
           ></textarea>
-          <button onClick={() => this.submit(post_title, content, post_image)}>
+          <button
+            onClick={() => this.submit(post_title, content, post_image)}
+            className="post-submit"
+          >
             Submit
           </button>
         </div>

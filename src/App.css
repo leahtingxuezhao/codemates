@@ -17,7 +17,7 @@
 }
 
 .nav-wrap {
-  margin-top: 25px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   width: 100vw;
@@ -30,15 +30,15 @@
 }
 
 .nav-title {
-  font-size: 20px;
-  margin-top: 10px;
+  font-size: 22px;
+  margin-top: 1vh;
 }
 .logo-box {
   display: flex;
 }
 .header-logo {
   margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   width: 50px;
 }
 
@@ -66,13 +66,6 @@
   border-radius: 20px;
 }
 
-.post-box {
-  width: 40vw;
-  height: 50vh;
-  margin: auto;
-  background-color: antiquewhite;
-}
-
 .homepage-p {
   margin-top: 50px;
   font-size: 35px;
@@ -87,17 +80,10 @@
 }
 
 .postBox {
-  /* background: linear-gradient(
-    90deg,
-    rgb(183, 233, 221) 0%,
-    rgb(176, 220, 243) 38%,
-    rgb(243, 255, 198) 100%
-  ); */
-
-  background-color: rgb(196, 214, 246);
+  background-color: rgb(185, 213, 255);
   position: relative;
   display: flex;
-  height: 12vh;
+  height: 10vh;
   width: 50vw;
   margin-left: 25vw;
   margin-top: 4vh;
@@ -130,14 +116,11 @@
   margin-top: 8vh;
 }
 
-.bigPostImage {
-  width: 50vw;
-}
-
 .post-userPic {
-  width: 5vw;
-  height: 8vh;
+  width: 3vw;
+  height: 6vh;
   border-radius: 50%;
+  margin-top: 0.2vh;
 }
 
 .user-box {
@@ -151,6 +134,7 @@
 .user-name {
   font-size: 12px;
   font-weight: bold;
+  padding-bottom: 0.5vh;
 }
 
 .postArea {
@@ -196,4 +180,161 @@
 
 .event-image {
   width: 30vw;
+}
+
+.post-title {
+  margin-left: 4vw;
+  margin-top: 4vh;
+  font-size: large;
+}
+.post-background {
+  display: flex;
+  flex-direction: column;
+}
+
+.bigPostImage {
+  width: 50vw;
+  margin-left: 25vw;
+}
+
+.newpost-button {
+  width: 12vw;
+  height: 6vh;
+  background-color: yellow;
+  margin: auto;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 3vh;
+  border: 2px;
+}
+
+.post-box {
+  position: relative;
+  width: 40vw;
+  height: 58vh;
+  margin: auto;
+  background-color: yellow;
+  margin-top: 2vh;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.addImage {
+  position: relative;
+  width: 20vw;
+  height: 22vh;
+  background-color: white;
+  margin-left: 10vw;
+  margin-top: 5vh;
+  border-radius: 20px;
+}
+
+.post-input {
+  width: 30vw;
+  height: 2vh;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.newpost-title {
+  position: relative;
+  padding-top: 2vh;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.newpost-content {
+  width: 30vw;
+  height: 6vh;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.post-submit {
+  position: relative;
+  height: 3vh;
+  width: 4vw;
+  margin: auto;
+  margin-bottom: 5vh;
+  margin-top: 2vh;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#create-post {
+  font-size: 25px;
+
+  color: darkblue;
+  font-weight: bold;
+  margin-top: 1vh;
+}
+
+.projectBox {
+  background-color: rgb(181, 245, 224);
+  position: relative;
+  display: flex;
+  height: 10vh;
+  width: 50vw;
+  margin-left: 25vw;
+  margin-top: 4vh;
+  border-radius: 10px;
+  box-shadow: rgb(129, 132, 133) 5px 5px 5px 3px;
+}
+
+.instruction {
+  width: 15vw;
+  margin-left: -5vw;
+  margin-top: 10vh;
+}
+
+.instruction-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.instruction {
+  font-size: 20px;
+}
+
+.instruction-project {
+  width: 25vw;
+  font-size: 20px;
+}
+
+.instruction-events {
+  width: 18vw;
+  font-size: 20px;
+  margin-left: -5vw;
+}
+.project-languages {
+  margin-top: 1vh;
+  margin-left: 2vw;
+  background-color: yellow;
+  height: 2vh;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.project-title {
+  margin-left: 2.5vw;
+  margin-top: 1.5vh;
+  font-size: large;
+}
+
+.image-container {
+  margin-left: 17.5vw;
+  width: 65vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.newProjectImage {
+  height: 20vh;
+}
+
+.newProjectPage {
+  background-color: rgb(249, 249, 249);
 }

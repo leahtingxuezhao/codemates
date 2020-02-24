@@ -46,9 +46,11 @@ class PlaygroundsMain extends Component {
     return (
       <div className="post-background">
         <img src={bigPostImage} alt="bigPost" className="bigPostImage"></img>
-        <div>Playgrounds</div>
-        <button onClick={() => this.props.history.push("/newpost")}>
-          New Post
+        <button
+          onClick={() => this.props.history.push("/newpost")}
+          className="newpost-button"
+        >
+          Create a New Post
         </button>
         <div>{postList}</div>
       </div>

@@ -46,10 +46,7 @@ class SinglePost extends Component {
             className="post-userPic"
           ></img>
         </div>
-
-        <div>
-          <div>{title}</div>
-        </div>
+        <div className="post-title">{title}</div>
       </div>
     );
   }

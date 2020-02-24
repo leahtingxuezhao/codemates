@@ -20,16 +20,40 @@ function Home(props) {
             alt="image"
             className="function-image"
           ></img>
-          <div>Playgrounds</div>
+          <div className="instruction">
+            <p className="instruction-title">Playgrounds</p>
+            <div className="instruction-content">
+              We want to connect and build relationships with everyone we
+              interact with. We want our users to share their ideas, to grow and
+              achieve their goals in our Codemates community with us.
+            </div>
+          </div>
         </div>
         <div className="playgrounds-home">
           {" "}
-          <div>Projects</div>
+          <div className="instruction-project">
+            <p className="instruction-title">Projects</p>
+            <div className="instruction-content">
+              While every single Codeamtes member is capable of creating great
+              things, we know that we're stronger as a team. Great
+              communication, open and honest feedback, and recognizing each
+              other's strengths are just some things that make us greater
+              together.
+            </div>
+          </div>
           <img src={projectsImage} alt="image" className="project-image"></img>
         </div>
         <div className="playgrounds-home">
           <img src={eventsImage} alt="image" className="function-image"></img>
-          <div>Events</div>
+          <div className="instruction-events">
+            <p className="instruction-title">Events</p>
+            <div className="instruction-content">
+              We go the extra mile to make sure Codemates members have a great
+              time on our platform both online and offline. We’ve even hopped on
+              flights to connect with our users by hosting Codemates events all
+              around the world.
+            </div>
+          </div>
         </div>
       </div>
     </div>

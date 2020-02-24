@@ -38,10 +38,18 @@ class SingleProject extends Component {
           })
         }
       >
-        <div>{title}</div>
-        <div>{username}</div>
-        <div>{profile_pic}</div>
-        <div>{languages}</div>
+        <div className="user-box">
+          <div className="user-name">{username}</div>
+          <img
+            src={profile_pic}
+            alt="profile-pic"
+            className="post-userPic"
+          ></img>
+        </div>
+        <div>
+          <div className="project-languages">Languages: {languages}</div>
+          <div className="project-title">{title}</div>
+        </div>
       </div>
     );
   }

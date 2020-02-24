@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
 import SingleProject from "./SingleProject";
+import bigPostImage from "../image_folder/bigPost.jpeg";
 
 class ProjectsMain extends Component {
   constructor(props) {
@@ -38,10 +39,13 @@ class ProjectsMain extends Component {
     });
     console.log("projectList :", projectList);
     return (
-      <div>
-        <div>Projects</div>
-        <button onClick={() => this.props.history.push("/newproject")}>
-          New Project
+      <div className="post-background">
+        <img src={bigPostImage} alt="bigPost" className="bigPostImage"></img>
+        <button
+          onClick={() => this.props.history.push("/newproject")}
+          className="newpost-button"
+        >
+          Create a New Project
         </button>
         <div>{projectList}</div>
       </div>
