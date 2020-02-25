@@ -10,9 +10,11 @@ class SingleComment extends Component {
     const { username, profile_pic, comment } = this.props;
 
     return (
-      <div>
-        <div>{username}</div>
-        <div>{comment}</div>
+      <div className="post-comment-box">
+        <div className="post-comment-container">
+          <div className="comment-user">{username}</div>
+          <div className="comment-c">{comment}</div>
+        </div>
       </div>
     );
   }

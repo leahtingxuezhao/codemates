@@ -76,55 +76,77 @@ class Auth extends Component {
           <div className="login-box">
             <p className="auth-title">WELCOME BACK!</p>
             <img src={welcome} alt="welcome" className="welcome"></img>
-            <div className="auth-small-title">NAME :</div>
-            <input
-              name="username"
-              placeholder="Username"
-              onChange={e => this.handleChange(e)}
-            ></input>
-            <div className="auth-small-title">PASSWORD :</div>
-            <input
-              name="password"
-              onChange={e => this.handleChange(e)}
-              placeholder="Password"
-            ></input>
-            <button onClick={() => this.login(username, password)}>
+            <div className="auth-input-box">
+              <div className="auth-small-title">NAME :</div>
+              <input
+                name="username"
+                placeholder="Username"
+                onChange={e => this.handleChange(e)}
+                className="auth-input"
+              ></input>
+            </div>
+            <div className="auth-input-box">
+              <div className="auth-small-title">PASSWORD :</div>
+              <input
+                name="password"
+                onChange={e => this.handleChange(e)}
+                placeholder="Password"
+                className="auth-input"
+              ></input>
+            </div>
+            <button
+              onClick={() => this.login(username, password)}
+              className="auth-button"
+            >
               Log in
             </button>
           </div>
           <div className="register-box">
             <p className="auth-title">CREATE AN ACCOUNT :)</p>
             <img src={registerImage} alt="register" className="welcome"></img>
-            <div className="auth-small-title">NAME :</div>
-            <input
-              name="username"
-              placeholder="Username"
-              onChange={e => this.handleChange(e)}
-            ></input>
-            <div className="auth-small-title">EMAIL ADDRESS :</div>
-            <input
-              name="email"
-              placeholder="Email"
-              onChange={e => this.handleChange(e)}
-            ></input>
-            <div className="auth-small-title">PASSWORD :</div>
-            <input
-              name="password"
-              onChange={e => this.handleChange(e)}
-              placeholder="Password"
-            ></input>
-            <div className="auth-small-title">PROFILE PICTURE :</div>
-            <input
-              name="profile_pic"
-              placeholder="image"
-              onChange={e => this.handleChange(e)}
-            ></input>
+            <div className="auth-input-box">
+              <div className="auth-small-title">NAME :</div>
+              <input
+                name="username"
+                placeholder="Username"
+                onChange={e => this.handleChange(e)}
+                className="auth-input"
+              ></input>
+            </div>
+            <div className="auth-input-box">
+              <div className="auth-small-title">EMAIL ADDRESS :</div>
+              <input
+                name="email"
+                placeholder="Email"
+                onChange={e => this.handleChange(e)}
+                className="auth-input"
+              ></input>
+            </div>
+            <div className="auth-input-box">
+              <div className="auth-small-title">PASSWORD :</div>
+              <input
+                name="password"
+                onChange={e => this.handleChange(e)}
+                placeholder="Password"
+                className="auth-input"
+              ></input>
+            </div>
+            <div className="auth-input-box">
+              <div className="auth-small-title">PROFILE PICTURE :</div>
+              <input
+                name="profile_pic"
+                placeholder="image"
+                onChange={e => this.handleChange(e)}
+                className="auth-input"
+              ></input>
+            </div>
             <button
               onClick={() =>
                 this.register(username, email, password, profile_pic)
               }
+              className="auth-button-B"
             >
-              Create new account
+              Submit
             </button>
           </div>
         </div>

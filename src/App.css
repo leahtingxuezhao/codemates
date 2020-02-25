@@ -83,7 +83,7 @@
 }
 
 .postBox {
-  background-color: rgb(185, 213, 255);
+  background-color: rgb(230, 230, 230);
   position: relative;
   display: flex;
   height: 10vh;
@@ -141,20 +141,23 @@
 }
 
 .postArea {
-  width: 40vw;
+  width: 35vw;
+  height: 50vh;
   box-shadow: 5px 2px 5px 2px gray;
   margin: auto;
-  margin-top: 5vh;
   border-radius: 10px;
 }
 
 .post-image {
-  width: 35vw;
+  width: 25vw;
   margin: auto;
+  margin-top: 3vh;
+  border-radius: 5px;
 }
 
 .post-content {
-  margin: 5vh;
+  margin-top: 2vh;
+  font-weight: bold;
 }
 
 .update-button {
@@ -275,7 +278,7 @@
 }
 
 .projectBox {
-  background-color: rgb(181, 245, 224);
+  background-color: rgb(255, 175, 2);
   position: relative;
   display: flex;
   height: 10vh;
@@ -314,7 +317,7 @@
 .project-languages {
   margin-top: 1vh;
   margin-left: 2vw;
-  background-color: yellow;
+  background-color: rgb(219, 210, 210);
   height: 2vh;
   border-radius: 3px;
   font-size: 12px;
@@ -357,4 +360,102 @@
   color: white;
   font-size: 15px;
   font-weight: bold;
+}
+
+.authInputBox {
+  display: flex;
+  margin-top: 3vh;
+}
+
+.auth-input-box {
+  margin-top: 1vh;
+}
+
+.auth-input {
+  margin-top: 1vh;
+  width: 10vw;
+  height: 2vh;
+  border-radius: 5px;
+}
+
+.auth-button {
+  margin-top: 3vh;
+  width: 5vw;
+  height: 3vh;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: rgb(178, 144, 255);
+  color: white;
+  border-radius: 5px;
+  border: 2px;
+}
+.auth-button-B {
+  margin-top: 3vh;
+  width: 5vw;
+  height: 3vh;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: rgb(255, 175, 2);
+  color: white;
+  border-radius: 5px;
+  border: 2px;
+}
+
+.bigPostImageB {
+  width: 20vw;
+  margin: auto;
+  margin-top: 2vh;
+}
+
+.bigPost-title-container {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  padding-top: 2vh;
+  font-weight: bold;
+}
+
+.share-box {
+  margin: auto;
+  width: 35vw;
+  background-color: rgb(124, 159, 255);
+  margin-top: 5vh;
+
+  position: relative;
+}
+
+.share-title {
+  position: relative;
+  font-weight: bold;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+}
+.share-comment {
+  width: 25vw;
+  height: 3vw;
+}
+
+.post-comment-box {
+  width: 35vw;
+  margin: auto;
+  height: 5vh;
+  background-color: rgb(124, 159, 255);
+}
+.post-comment-container {
+  display: flex;
+  margin-left: 5vw;
+}
+
+.comment-user {
+  background-color: yellow;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 3px;
+  margin-top: 5vh;
+}
+
+.comment-c {
+  position: relative;
+  width: 30vw;
+  margin-top: 5vh;
 }

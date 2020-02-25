@@ -3,8 +3,9 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { pathOr } from "ramda";
 import axios from "axios";
-import bigPostImage from "../image_folder/bigPost.jpeg";
 import SingleComment from "./SingleComment";
+import bigPostImage from "../image_folder/bigPost.jpeg";
+import bigpostHeader from "../image_folder/bigpostHeader.png";
 
 class BigPost extends Component {
   constructor(props) {
@@ -179,12 +180,13 @@ class BigPost extends Component {
 
     const commentArea = () => {
       return (
-        <div>
-          <div>Share your thoughts</div>
+        <div className="share-box">
+          <div className="share-title">Share Your Thoughts</div>
           <textarea
             placeholder="Leave your comments"
             name="comment"
             onChange={e => this.handleChange(e)}
+            className="share-comment"
           ></textarea>
           <button
             onClick={() => this.createComment(user, id, this.state.comment)}
@@ -217,16 +219,18 @@ class BigPost extends Component {
     } = this.state;
     return (
       <div>
-        <img src={bigPostImage} alt="bigPost" className="bigPostImage"></img>
+        <img src={bigpostHeader} alt="bigPost" className="bigPostImageB"></img>
         <div className="postArea">
-          <div>TITLE: {displayTitle}</div>
-          <div>By user {displayUsername}</div>
+          <div className="bigPost-title-container">
+            <div>Post Title : {displayTitle}</div>
+            <div>Post By User: {displayUsername}</div>
+          </div>
           <img
             src={displayPostImage}
             alt="post-image"
             className="post-image"
           ></img>
-          <div className="post-content">POST CONTENT: {displayContent}</div>
+          <div className="post-content">Post Content: {displayContent}</div>
 
           <div>{editButton()}</div>
         </div>
