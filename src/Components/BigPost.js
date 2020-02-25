@@ -190,9 +190,11 @@ class BigPost extends Component {
           ></textarea>
           <button
             onClick={() => this.createComment(user, id, this.state.comment)}
+            className="sharebox-button"
           >
             Submit
           </button>
+          {commentList}
         </div>
       );
     };
@@ -235,7 +237,6 @@ class BigPost extends Component {
           <div>{editButton()}</div>
         </div>
         <div>{commentArea()}</div>
-        {commentList}
       </div>
     );
   }

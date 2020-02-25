@@ -416,12 +416,15 @@
 }
 
 .share-box {
-  margin: auto;
   width: 35vw;
   background-color: rgb(124, 159, 255);
-  margin-top: 5vh;
-
   position: relative;
+  padding-bottom: 5vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+  margin-left: 32.5vw;
 }
 
 .share-title {
@@ -433,21 +436,22 @@
 .share-comment {
   width: 25vw;
   height: 3vw;
+  margin-left: 5vw;
+  border-radius: 5px;
+}
+.sharebox-button {
+  width: 3vw;
+  margin: auto;
+  margin-top: 2vh;
 }
 
-.post-comment-box {
-  width: 35vw;
-  margin: auto;
-  height: 5vh;
-  background-color: rgb(124, 159, 255);
-}
 .post-comment-container {
   display: flex;
   margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 .comment-user {
-  background-color: yellow;
   font-size: 15px;
   font-weight: bold;
   border-radius: 3px;
