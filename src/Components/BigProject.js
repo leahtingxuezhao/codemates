@@ -79,7 +79,8 @@ class BigProject extends Component {
         );
       } else {
         return (
-          <div>
+          <div className="contactPoster">
+            <img src={profile_pic} className="projectUserImage"></img>
             <button onClick={this.messageUser}>Message {username}</button>
           </div>
         );
@@ -87,13 +88,15 @@ class BigProject extends Component {
     };
 
     return (
-      <div>
-        <div>Big Project</div>
-        <div>{title}</div>
-        <div>{username}</div>
-        <div>{description}</div>
-        <div>{languages}</div>
-        <div>{profile_pic}</div>
+      <div className="postAreaB">
+        <div className="bigPost-title-containerB">
+          <div>Project Title : {title}</div>
+        </div>
+        <div className="bigPost-title-containerC">
+          Required Languages : {languages}
+        </div>
+        <div className="post-content">Details : {description}</div>
+
         <div>{editButton()}</div>
       </div>
     );

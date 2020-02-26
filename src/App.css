@@ -148,6 +148,15 @@
   border-radius: 10px;
 }
 
+.postAreaB {
+  width: 35vw;
+  height: 50vh;
+  box-shadow: 5px 2px 5px 2px gray;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 10vh;
+}
+
 .post-image {
   height: 30vh;
   margin: auto;
@@ -411,6 +420,41 @@
   position: relative;
   padding-top: 2vh;
   font-weight: bold;
+}
+
+.bigPost-title-containerB {
+  position: relative;
+  width: 30vw;
+  height: 5vh;
+  font-weight: bold;
+  background-color: rgb(124, 159, 255);
+  margin: auto;
+  margin-top: 3vh;
+  border-radius: 5px;
+}
+.bigPost-title-containerC {
+  width: 30vw;
+  height: 5vh;
+  font-weight: bold;
+  background-color: yellowgreen;
+  margin: auto;
+  margin-top: 3vh;
+  border-radius: 5px;
+}
+
+.bigPost-title-containerD {
+  width: 30vw;
+  height: 5vh;
+}
+
+.projectUserImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.contactPoster {
+  margin-top: 5vh;
 }
 
 .share-box {
