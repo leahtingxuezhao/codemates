@@ -42,7 +42,7 @@ class Header extends Component {
               className="company_name"
               onClick={() =>
                 this.props.history.push({
-                  pathname: "/playgrounds",
+                  pathname: "/",
                   state: { username }
                 })
               }

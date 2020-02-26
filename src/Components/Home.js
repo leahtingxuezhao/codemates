@@ -33,7 +33,7 @@ function Home(props) {
           {" "}
           <div className="instruction-project">
             <p className="instruction-title">Projects</p>
-            <div className="instruction-content">
+            <div className="instruction-contentB">
               While every single Codeamtes member is capable of creating great
               things, we know that we're stronger as a team. Great
               communication, open and honest feedback, and recognizing each

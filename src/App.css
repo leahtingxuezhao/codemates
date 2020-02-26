@@ -110,7 +110,7 @@
   width: 25vw;
 }
 .project-image {
-  width: 20vw;
+  width: 30vw;
 }
 
 .playgrounds-home {
@@ -315,7 +315,9 @@
   margin-top: 10vh;
   font-size: 20px;
 }
-
+.instruction-contentB {
+  width: 35vw;
+}
 .instruction-title {
   font-size: 25px;
   font-weight: bold;
