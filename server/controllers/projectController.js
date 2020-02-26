@@ -4,7 +4,7 @@ module.exports = {
     console.log(" hit create post");
     const db = req.app.get("db");
 
-    const user_id = pathOr("", req, session, user, user_id);
+    const user_id = pathOr("", ["session", "user", "user_id"])(req);
     const { project_title, project_description, project_languages } = req.body;
 
     db.create_project(

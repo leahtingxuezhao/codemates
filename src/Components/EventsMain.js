@@ -21,7 +21,7 @@ class EventsMain extends Component {
     let eventList = events.map(element => {
       return (
         <div className="event-box">
-          <div>{element.name.text}</div>
+          <div className="eventTitle">{element.name.text}</div>
           <img
             src={element.logo.original.url}
             alt="event-image"
@@ -34,7 +34,13 @@ class EventsMain extends Component {
     });
 
     console.log("events :", events);
-    return <div>{eventList}</div>;
+    return (
+      <div>
+        {" "}
+        <div className="mission-box">Codemates Events</div>
+        <div>{eventList}</div>
+      </div>
+    );
   }
 }
 

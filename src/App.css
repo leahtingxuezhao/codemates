@@ -191,9 +191,14 @@
   height: 50vh;
   width: 40vw;
   margin: auto;
-  margin-top: 8vh;
+  margin-top: 5vh;
 }
-
+.eventTitle {
+  background-color: rgb(124, 159, 255);
+  font-size: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
 .event-image {
   width: 30vw;
 }
@@ -223,6 +228,11 @@
   border-radius: 10px;
   margin-top: 3vh;
   border: 2px;
+}
+
+.newpost-header-image {
+  width: 80vw;
+  margin: auto;
 }
 
 .post-box {

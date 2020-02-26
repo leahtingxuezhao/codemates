@@ -47,7 +47,10 @@ class Auth extends Component {
         console.log("register, res :", res);
         this.props.setUser(res.data);
         this.email(email);
-        this.props.history.push("/");
+        this.props.history.push({
+          pathname: "/",
+          state: { username }
+        });
       })
       .catch(err => {
         console.log(err);

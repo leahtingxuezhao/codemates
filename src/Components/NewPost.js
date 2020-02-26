@@ -3,6 +3,7 @@ import { render } from "@testing-library/react";
 import axios from "axios";
 import newPostImage from "../image_folder/newpost-header.jpeg";
 import addImage from "../image_folder/add-picture.png";
+import { pathOr } from "ramda";
 
 class NewPost extends Component {
   constructor(props) {
@@ -22,10 +23,18 @@ class NewPost extends Component {
   };
 
   submit = (post_title, content, post_image) => {
+    const { username } = pathOr(
+      {},
+      ["history", "location", "state"],
+      this.props
+    );
     axios
       .post("/api/create_post", { post_title, content, post_image })
       .then(() => {
-        this.props.history.push("/playgrounds");
+        this.props.history.push({
+          pathname: "/playgrounds",
+          state: { username }
+        });
       });
   };
 

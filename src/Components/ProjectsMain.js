@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import axios from "axios";
 import SingleProject from "./SingleProject";
 import bigPostImage from "../image_folder/bigPost.jpeg";
+import { pathOr } from "ramda";
 
 class ProjectsMain extends Component {
   constructor(props) {
@@ -37,12 +38,23 @@ class ProjectsMain extends Component {
         />
       );
     });
+
+    const { username } = pathOr(
+      {},
+      ["history", "location", "state"],
+      this.props
+    );
     console.log("projectList :", projectList);
     return (
       <div className="post-background">
         <img src={bigPostImage} alt="bigPost" className="bigPostImage"></img>
         <button
-          onClick={() => this.props.history.push("/newproject")}
+          onClick={() =>
+            this.props.history.push({
+              pathname: "/newproject",
+              state: { username }
+            })
+          }
           className="newpost-button"
         >
           Create a New Project
