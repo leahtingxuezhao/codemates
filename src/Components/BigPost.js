@@ -10,6 +10,7 @@ import bigpostHeader from "../image_folder/bigpostHeader.png";
 class BigPost extends Component {
   constructor(props) {
     super(props);
+
     const { title, content, username, image } = pathOr(
       {},
       ["history", "location", "state"],
@@ -117,33 +118,43 @@ class BigPost extends Component {
         const { post_title, content, post_image } = this.state;
         if (this.state.isVisible) {
           return (
-            <div>
-              <div>
+            <div className="bigEditbox">
+              <div className="editboxA">
                 <p>New Title</p>
                 <input
-                  placeholder="title"
-                  name="post_title"
+                  placeholder={displayTitle}
+                  name="displayTitle"
+                  value={displayTitle}
                   onChange={e => this.handleChange(e)}
                 ></input>
               </div>
-              <div>
+              <div className="editboxA">
                 <p>New Content</p>
                 <input
-                  placeholder="content"
-                  name="content"
+                  placeholder={displayContent}
+                  name="displayContent"
+                  value={displayContent}
                   onChange={e => this.handleChange(e)}
                 ></input>
               </div>
-              <div>
+              <div className="editboxA">
                 <p>New Image Address</p>
                 <textarea
-                  placeholder="image"
-                  name="post_image"
+                  placeholder={displayPostImage}
+                  name="displayPostImage"
+                  value={displayPostImage}
                   onChange={e => this.handleChange(e)}
                 ></textarea>
               </div>
               <button
-                onClick={() => this.updatePost(post_title, content, post_image)}
+                onClick={() =>
+                  this.updatePost(
+                    displayTitle,
+                    displayContent,
+                    displayPostImage
+                  )
+                }
+                className="edit-update"
               >
                 Update
               </button>
@@ -154,25 +165,28 @@ class BigPost extends Component {
 
       if (user === user_id) {
         return (
-          <div className="update-button">
-            <button
-              className="button-p"
-              onClick={() => {
-                this.toggle();
-              }}
-            >
-              Edit Post
-            </button>
-            <div>{editBox()}</div>
-            <button
-              className="button-p"
-              onClick={() => {
-                console.log("this.props :", this.props);
-                this.deletePost(id);
-              }}
-            >
-              Delete Post
-            </button>
+          <div>
+            <div className="update-button">
+              <button
+                className="button-p"
+                onClick={() => {
+                  this.toggle();
+                }}
+              >
+                Edit
+              </button>
+
+              <button
+                className="button-p"
+                onClick={() => {
+                  console.log("this.props :", this.props);
+                  this.deletePost(id);
+                }}
+              >
+                Delete
+              </button>
+            </div>
+            <div className="dropdown-editbox">{editBox()}</div>
           </div>
         );
       }

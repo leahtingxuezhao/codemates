@@ -10,7 +10,7 @@ function Chat(props) {
   let [socket, startSocketConnection] = useState(null);
 
   if (!socket) startSocketConnection(io.connect());
-  // console.log("this is props.match", props.match);
+  console.log("this is props.match", props.match);
   useEffect(() => {
     if (input.length > 0) return;
     if (props.match.params.user_id) {
@@ -37,6 +37,8 @@ function Chat(props) {
   }, []);
   function messageToServer() {
     const { username, user } = props.match.params;
+    console.log("username :", username);
+    console.log("user :", user);
     socket.emit("message to server", {
       user_id: user,
       message: input,
@@ -45,20 +47,15 @@ function Chat(props) {
     });
     handleChange("");
   }
-  function deleteMessage(id) {
-    socket.emit("delete message", {
-      message_id: id,
-      chatroom_id
-    });
-  }
 
   return (
     <div className="chat">
+      <div className="chatroom-title">Chat Room</div>
       <div className="messages" id="style-2">
         {messages.map(msg => (
           <div
             className={
-              msg.user_id === props.match.params.user ? "sender" : "receiver"
+              +msg.user_id === +props.match.params.user ? "sender" : "receiver"
             }
           >
             <h4>{msg.username}</h4>

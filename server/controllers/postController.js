@@ -47,7 +47,9 @@ module.exports = {
   deletePost: (req, res) => {
     const db = req.app.get("db");
     const { id } = req.params;
-    db.delete_post(Number(id)).then(data => res.sendStatus(200));
+    db.delete_comments(Number(id)).then(() => {
+      db.delete_post(Number(id)).then(data => res.sendStatus(200));
+    });
   },
   updatePost: (req, res) => {
     const db = req.app.get("db");

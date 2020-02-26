@@ -1,2 +1,5 @@
-DELETE FROM codemates_posts
+DELETE FROM comments 
+
 WHERE post_id = $1
+
+

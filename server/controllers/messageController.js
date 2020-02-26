@@ -37,7 +37,7 @@ module.exports = {
       await db.create_message(
         +newChatroomId.chatroom_id,
         +user_id,
-        "message me",
+        "Start Conversation",
         "codemates.co@gmail.com"
       );
       socket.join(newChatroomId);

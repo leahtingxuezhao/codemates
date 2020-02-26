@@ -25,7 +25,10 @@ class BigProject extends Component {
     console.log("This is apple :", user_name);
     console.log("Leah ID:", user_id);
 
-    this.props.history.push(`/chat/${user_id}/${user}/${username}`);
+    this.props.history.push({
+      pathname: `/chat/${user_id}/${user}/${username}`,
+      state: { username }
+    });
   };
 
   deleteProject = id => {

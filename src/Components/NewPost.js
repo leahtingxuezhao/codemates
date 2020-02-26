@@ -37,7 +37,7 @@ class NewPost extends Component {
 
     return (
       <div>
-        <img src={newPostImage}></img>
+        <img src={newPostImage} className="newpost-header-image"></img>
         <div id="create-post">CREATE YOUR NEW POST</div>
         <div className="post-box">
           <div className="addImage">

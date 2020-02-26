@@ -34,6 +34,7 @@ module.exports = {
   deleteProject: (req, res) => {
     const db = req.app.get("db");
     const { id } = req.params;
+
     db.delete_project(Number(id)).then(data => res.sendStatus(200));
   }
 };

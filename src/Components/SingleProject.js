@@ -20,10 +20,12 @@ class SingleProject extends Component {
       user_id,
       description
     } = this.props;
+    console.log("id :", id);
     return (
       <div
         className="projectBox"
         onClick={() =>
+          console.log("clicked") ||
           this.props.history.push({
             pathname: `/project/${id}`,
             state: {

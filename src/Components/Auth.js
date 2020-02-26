@@ -23,7 +23,10 @@ class Auth extends Component {
         console.log("res :", res);
         this.props.setUser(res.data);
         console.log("login this.props :", this.props);
-        this.props.history.push("/");
+        this.props.history.push({
+          pathname: "/",
+          state: { username }
+        });
       })
       .catch(err => {
         console.log(err);
