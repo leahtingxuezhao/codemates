@@ -1,0 +1,69 @@
+.fullHomePage {
+  margin-top: 12vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-p {
+  margin-top: 7vh;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.mission-box {
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  color: darkblue;
+}
+
+#homepagePicture {
+  width: 100vw;
+}
+
+.threeFunctions {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.function-image {
+  height: 40vh;
+}
+.project-image {
+  height: 26vh;
+}
+
+.playgrounds-home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 8vh;
+}
+
+.instruction {
+  width: 20vw;
+  margin-left: -5vw;
+  margin-top: 10vh;
+  font-size: 20px;
+}
+.instruction-contentB {
+  /* width: 30vw; */
+  text-align: left;
+  margin-top: 5vh;
+}
+
+.instruction-content {
+  text-align: left;
+  margin-top: 5vh;
+}
+.instruction-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: auto;
+}
+
+.instruction-project {
+  width: 40vw;
+  font-size: 20px;
+}

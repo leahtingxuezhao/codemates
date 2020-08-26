@@ -1,0 +1,31 @@
+.event-box {
+  height: 50vh;
+  width: 40vw;
+  margin: auto;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+.eventTitle {
+  font-size: 2.5vh;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+.event-image {
+  width: 30vw;
+  margin: auto;
+}
+
+.mission-box {
+  margin-top: 18vh;
+}
+
+.event-description {
+  width: 25vw;
+  margin: auto;
+  text-align: left;
+}
+
+.check-button {
+  font-weight: bolder;
+}

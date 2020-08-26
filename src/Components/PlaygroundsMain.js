@@ -3,12 +3,14 @@ import { withRouter } from "react-router-dom";
 import axios from "axios";
 import SinglePost from "./SinglePost";
 import bigPostImage from "../image_folder/bigPost.jpeg";
+import "./PlaygroundsMain.css";
+import plusIcon from "../image_folder/iconfinder_icon-plus-circle_2867932.png";
 
 class PlaygroundsMain extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: []
+      posts: [],
     };
   }
   componentDidMount() {
@@ -18,11 +20,11 @@ class PlaygroundsMain extends Component {
   reRender = () => {
     axios
       .get("/api/get_posts")
-      .then(res => {
+      .then((res) => {
         console.log("res.data :", res.data);
         this.setState({ posts: res.data });
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
 
   render() {
@@ -46,12 +48,14 @@ class PlaygroundsMain extends Component {
     return (
       <div className="post-background">
         <img src={bigPostImage} alt="bigPost" className="bigPostImage"></img>
-        <button
+
+        <div className="newpost-T">create a new post</div>
+        <img
           onClick={() => this.props.history.push("/newpost")}
+          src={plusIcon}
           className="newpost-button"
-        >
-          Create a New Post
-        </button>
+        ></img>
+
         <div>{postList}</div>
       </div>
     );

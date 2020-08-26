@@ -4,6 +4,7 @@ import axios from "axios";
 import newPostImage from "../image_folder/newpost-header.jpeg";
 import addImage from "../image_folder/add-picture.png";
 import { pathOr } from "ramda";
+import "./SinglePost.css";
 
 class NewPost extends Component {
   constructor(props) {
@@ -11,14 +12,14 @@ class NewPost extends Component {
     this.state = {
       post_title: "",
       content: "",
-      post_image: ""
+      post_image: "",
     };
   }
 
-  handleChange = e => {
+  handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({
-      [name]: value
+      [name]: value,
     });
   };
 
@@ -33,7 +34,7 @@ class NewPost extends Component {
       .then(() => {
         this.props.history.push({
           pathname: "/playgrounds",
-          state: { username }
+          state: { username },
         });
       });
   };
@@ -47,37 +48,36 @@ class NewPost extends Component {
     return (
       <div>
         <img src={newPostImage} className="newpost-header-image"></img>
-        <div id="create-post">CREATE YOUR NEW POST</div>
         <div className="post-box">
           <div className="addImage">
             <img src={addImage} alt="addImage"></img>
           </div>
-          <div className="newpost-title">Image Address :</div>
+          <div className="newpost-title">IMAGE ADDRESS :</div>
           <input
             name="post_image"
-            onChange={e => this.handleChange(e)}
+            onChange={(e) => this.handleChange(e)}
             placeholder="image address"
             className="post-input"
           ></input>
-          <div className="newpost-title">Post Title :</div>
+          <div className="newpost-title">POST TITLE :</div>
           <input
             name="post_title"
-            onChange={e => this.handleChange(e)}
-            placeholder="Post Title"
+            onChange={(e) => this.handleChange(e)}
+            placeholder="post title"
             className="post-input"
           ></input>
-          <div className="newpost-title">Post Content :</div>
-          <textarea
+          <div className="newpost-title">POST CONTENT :</div>
+          <input
             name="content"
-            onChange={e => this.handleChange(e)}
-            placeholder="Post Content"
-            className="newpost-content"
-          ></textarea>
+            onChange={(e) => this.handleChange(e)}
+            placeholder="post content"
+            className="post-input"
+          ></input>
           <button
             onClick={() => this.submit(post_title, content, post_image)}
             className="post-submit"
           >
-            Submit
+            SUBMIT
           </button>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
-import logo from "../image_folder/logo.png";
 import { pathOr } from "ramda";
 import axios from "axios";
+import "./Header.css";
 
 class Header extends Component {
   constructor(props) {
@@ -35,57 +35,53 @@ class Header extends Component {
     };
     return (
       <div className="header-box">
-        <div className="nav-wrap">
-          <div className="logo-box">
-            <img src={logo} alt="logo" className="header-logo"></img>
-            <div
-              className="company_name"
-              onClick={() =>
-                this.props.history.push({
-                  pathname: "/",
-                  state: { username }
-                })
-              }
-            >
-              CODEMATES
-            </div>
+        <div
+          className="company_name"
+          onClick={() =>
+            this.props.history.push({
+              pathname: "/",
+              state: { username },
+            })
+          }
+        >
+          CODEMATES
+        </div>
+
+        <div className="nav-bar">
+          <div
+            onClick={() =>
+              this.props.history.push({
+                pathname: "/playgrounds",
+                state: { username },
+              })
+            }
+            className="nav-title"
+          >
+            PLAYGROUNDS
           </div>
-          <div className="nav-bar">
-            <div
-              onClick={() =>
-                this.props.history.push({
-                  pathname: "/playgrounds",
-                  state: { username }
-                })
-              }
-              className="nav-title"
-            >
-              Playgrounds
-            </div>
-            <div
-              onClick={() =>
-                this.props.history.push({
-                  pathname: "/projects",
-                  state: { username }
-                })
-              }
-              className="nav-title"
-            >
-              Projects
-            </div>
-            <div
-              onClick={() =>
-                this.props.history.push({
-                  pathname: "/events",
-                  state: { username }
-                })
-              }
-              className="nav-title"
-            >
-              Events
-            </div>
-            <div>{authInfo()}</div>
+          <div
+            onClick={() =>
+              this.props.history.push({
+                pathname: "/projects",
+                state: { username },
+              })
+            }
+            className="nav-title"
+          >
+            PROJECTS
           </div>
+          <div
+            onClick={() =>
+              this.props.history.push({
+                pathname: "/events",
+                state: { username },
+              })
+            }
+            className="nav-title"
+          >
+            EVENTS
+          </div>
+          <div>{authInfo()}</div>
         </div>
       </div>
     );

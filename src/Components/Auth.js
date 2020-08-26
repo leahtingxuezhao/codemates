@@ -5,6 +5,8 @@ import { setUser } from "../redux/authReducer";
 import authPic from "../image_folder/authPic.jpeg";
 import welcome from "../image_folder/welcome.jpeg";
 import registerImage from "../image_folder/registerImage.jpeg";
+import "./Auth.css";
+
 class Auth extends Component {
   constructor(props) {
     super(props);
@@ -12,23 +14,23 @@ class Auth extends Component {
       username: "",
       password: "",
       email: "",
-      profile_pic: ""
+      profile_pic: "",
     };
   }
 
   login = (username, password) => {
     axios
       .post("/auth/login", { username, password })
-      .then(res => {
+      .then((res) => {
         console.log("res :", res);
         this.props.setUser(res.data);
         console.log("login this.props :", this.props);
         this.props.history.push({
           pathname: "/",
-          state: { username }
+          state: { username },
         });
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   };
@@ -43,28 +45,28 @@ class Auth extends Component {
     );
     axios
       .post("/auth/register", { username, email, password, profile_pic })
-      .then(res => {
+      .then((res) => {
         console.log("register, res :", res);
         this.props.setUser(res.data);
         this.email(email);
         this.props.history.push({
           pathname: "/",
-          state: { username }
+          state: { username },
         });
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   };
-  email = email => {
-    axios.post("/auth/email", { email }).catch(err => {
+  email = (email) => {
+    axios.post("/auth/email", { email }).catch((err) => {
       console.log(err);
     });
   };
-  handleChange = e => {
+  handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({
-      [name]: value
+      [name]: value,
     });
   };
 
@@ -77,7 +79,6 @@ class Auth extends Component {
     const { push } = this.props.history;
     return (
       <div>
-        <img src={authPic} alt="authPic"></img>
         <div className="auth-box">
           <div className="login-box">
             <p className="auth-title">WELCOME BACK!</p>
@@ -86,8 +87,8 @@ class Auth extends Component {
               <div className="auth-small-title">NAME :</div>
               <input
                 name="username"
-                placeholder="Username"
-                onChange={e => this.handleChange(e)}
+                placeholder="username"
+                onChange={(e) => this.handleChange(e)}
                 className="auth-input"
               ></input>
             </div>
@@ -95,8 +96,8 @@ class Auth extends Component {
               <div className="auth-small-title">PASSWORD :</div>
               <input
                 name="password"
-                onChange={e => this.handleChange(e)}
-                placeholder="Password"
+                onChange={(e) => this.handleChange(e)}
+                placeholder="password"
                 className="auth-input"
               ></input>
             </div>
@@ -114,8 +115,8 @@ class Auth extends Component {
               <div className="auth-small-title">NAME :</div>
               <input
                 name="username"
-                placeholder="Username"
-                onChange={e => this.handleChange(e)}
+                placeholder="username"
+                onChange={(e) => this.handleChange(e)}
                 className="auth-input"
               ></input>
             </div>
@@ -123,8 +124,8 @@ class Auth extends Component {
               <div className="auth-small-title">EMAIL ADDRESS :</div>
               <input
                 name="email"
-                placeholder="Email"
-                onChange={e => this.handleChange(e)}
+                placeholder="email"
+                onChange={(e) => this.handleChange(e)}
                 className="auth-input"
               ></input>
             </div>
@@ -132,8 +133,8 @@ class Auth extends Component {
               <div className="auth-small-title">PASSWORD :</div>
               <input
                 name="password"
-                onChange={e => this.handleChange(e)}
-                placeholder="Password"
+                onChange={(e) => this.handleChange(e)}
+                placeholder="password"
                 className="auth-input"
               ></input>
             </div>
@@ -142,7 +143,7 @@ class Auth extends Component {
               <input
                 name="profile_pic"
                 placeholder="image"
-                onChange={e => this.handleChange(e)}
+                onChange={(e) => this.handleChange(e)}
                 className="auth-input"
               ></input>
             </div>
@@ -162,7 +163,7 @@ class Auth extends Component {
 }
 
 const mapDispatchToProps = {
-  setUser
+  setUser,
 };
 
 export default connect(null, mapDispatchToProps)(Auth);

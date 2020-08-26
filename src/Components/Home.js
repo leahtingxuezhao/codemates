@@ -3,10 +3,11 @@ import homepageImage from "../../src/image_folder/homepage.jpeg";
 import eventsImage from "../image_folder/events.jpeg";
 import playgroundsImage from "../image_folder/playgrounds.png";
 import projectsImage from "../image_folder/projects.jpeg";
+import "./Home.css";
 
 function Home(props) {
   return (
-    <div>
+    <div className="fullHomePage">
       {" "}
       <div className="mission-box">OUR MISSION</div>
       <div className="homepage-p">Build your own coding networks...</div>

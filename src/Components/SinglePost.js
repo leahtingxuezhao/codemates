@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import "./SinglePost.css";
 
 class SinglePost extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class SinglePost extends Component {
       user_id,
       profile_pic,
       content,
-      image
+      image,
     } = this.props;
 
     return (
@@ -33,8 +34,8 @@ class SinglePost extends Component {
               user_id,
               profile_pic,
               content,
-              image
-            }
+              image,
+            },
           })
         }
       >

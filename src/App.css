@@ -2,86 +2,6 @@
   text-align: center;
 }
 
-.header-box {
-  width: 100vw;
-  height: 10vh;
-  background-color: rgb(124, 159, 255);
-  display: flex;
-}
-
-.company_name {
-  font-size: 25px;
-  font-weight: bold;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-
-.nav-wrap {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-}
-.nav-bar {
-  width: 60vw;
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.nav-title {
-  font-size: 22px;
-  margin-top: 1vh;
-}
-.logo-box {
-  display: flex;
-}
-.header-logo {
-  margin-left: 20px;
-  margin-bottom: 12px;
-  width: 50px;
-}
-
-.auth-box {
-  margin: auto;
-  width: 55vw;
-  height: 60vh;
-
-  margin-top: 2vh;
-
-  display: flex;
-}
-
-.login-box {
-  width: 23vw;
-  height: 60vh;
-  background-color: rgb(255, 175, 2);
-  border-radius: 20px;
-  box-shadow: 10px 15px 1px 10px rgb(178, 144, 255);
-}
-
-.register-box {
-  margin-left: 3vw;
-  width: 32vw;
-  height: 60vh;
-  background-color: rgb(178, 144, 255);
-  border-radius: 20px;
-  box-shadow: 10px 15px 1px 10px rgb(255, 175, 2);
-}
-
-.homepage-p {
-  margin-top: 50px;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.mission-box {
-  margin-top: 50px;
-  font-size: 25px;
-  font-weight: bold;
-  color: darkblue;
-}
-
 .postBox {
   background-color: rgb(230, 230, 230);
   position: relative;
@@ -92,31 +12,6 @@
   margin-top: 4vh;
   border-radius: 10px;
   box-shadow: rgb(129, 132, 133) 5px 5px 5px 3px;
-}
-
-#homepagePicture {
-  width: 100vw;
-}
-
-.threeFunctions {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 30vh;
-  margin-top: 10vh;
-}
-
-.function-image {
-  width: 25vw;
-}
-.project-image {
-  width: 30vw;
-}
-
-.playgrounds-home {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 8vh;
 }
 
 .post-userPic {
@@ -187,30 +82,10 @@
   margin-top: 3vh;
 }
 
-.event-box {
-  height: 50vh;
-  width: 40vw;
-  margin: auto;
-  margin-top: 5vh;
-}
-.eventTitle {
-  background-color: rgb(124, 159, 255);
-  font-size: 15px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-.event-image {
-  width: 30vw;
-}
-
 .post-title {
   margin-left: 4vw;
   margin-top: 4vh;
   font-size: large;
-}
-.post-background {
-  display: flex;
-  flex-direction: column;
 }
 
 .bigPostImage {
@@ -218,83 +93,11 @@
   margin-left: 25vw;
 }
 
-.newpost-button {
-  width: 12vw;
-  height: 6vh;
-  background-color: yellow;
-  margin: auto;
-  font-size: 15px;
-  font-weight: bold;
-  border-radius: 10px;
-  margin-top: 3vh;
-  border: 2px;
-}
-
-.newpost-header-image {
-  width: 80vw;
-  margin: auto;
-}
-
-.post-box {
-  position: relative;
-  width: 40vw;
-  height: 58vh;
-  margin: auto;
-  background-color: yellow;
-  margin-top: 2vh;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.addImage {
-  position: relative;
-  width: 20vw;
-  height: 22vh;
-  background-color: white;
-  margin-left: 10vw;
-  margin-top: 5vh;
-  border-radius: 20px;
-}
-
-.post-input {
-  width: 30vw;
-  height: 2vh;
-  margin: auto;
-  border-radius: 10px;
-}
-
-.newpost-title {
-  position: relative;
-  padding-top: 2vh;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.newpost-content {
-  width: 30vw;
-  height: 6vh;
-  margin: auto;
-  border-radius: 10px;
-}
-
-.post-submit {
-  position: relative;
-  height: 3vh;
-  width: 4vw;
-  margin: auto;
-  margin-bottom: 5vh;
-  margin-top: 2vh;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
 #create-post {
   font-size: 25px;
-
   color: darkblue;
   font-weight: bold;
-  margin-top: 1vh;
+  margin-top: 10vh;
 }
 
 .projectBox {
@@ -307,25 +110,6 @@
   margin-top: 4vh;
   border-radius: 10px;
   box-shadow: rgb(129, 132, 133) 5px 5px 5px 3px;
-}
-
-.instruction {
-  width: 20vw;
-  margin-left: -5vw;
-  margin-top: 10vh;
-  font-size: 20px;
-}
-.instruction-contentB {
-  width: 35vw;
-}
-.instruction-title {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.instruction-project {
-  width: 40vw;
-  font-size: 20px;
 }
 
 .instruction-events {
@@ -367,57 +151,6 @@
 .welcome {
   width: 16vh;
   border-radius: 10px;
-}
-
-.auth-title {
-  color: white;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.auth-small-title {
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.authInputBox {
-  display: flex;
-  margin-top: 3vh;
-}
-
-.auth-input-box {
-  margin-top: 1vh;
-}
-
-.auth-input {
-  margin-top: 1vh;
-  width: 10vw;
-  height: 2vh;
-  border-radius: 5px;
-}
-
-.auth-button {
-  margin-top: 3vh;
-  width: 5vw;
-  height: 3vh;
-  font-size: 15px;
-  font-weight: bold;
-  background-color: rgb(178, 144, 255);
-  color: white;
-  border-radius: 5px;
-  border: 2px;
-}
-.auth-button-B {
-  margin-top: 3vh;
-  width: 5vw;
-  height: 3vh;
-  font-size: 15px;
-  font-weight: bold;
-  background-color: rgb(255, 175, 2);
-  color: white;
-  border-radius: 5px;
-  border: 2px;
 }
 
 .bigPostImageB {

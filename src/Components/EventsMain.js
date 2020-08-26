@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import "./EventsMain.css";
 
 class EventsMain extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      events: []
+      events: [],
     };
   }
 
@@ -18,7 +19,7 @@ class EventsMain extends Component {
 
   render() {
     const { events } = this.state;
-    let eventList = events.map(element => {
+    let eventList = events.map((element) => {
       return (
         <div className="event-box">
           <div className="eventTitle">{element.name.text}</div>
@@ -27,8 +28,10 @@ class EventsMain extends Component {
             alt="event-image"
             className="event-image"
           ></img>
-          <div>{element.description.text}</div>
-          <a href={element.url}>Check ticket</a>
+          <div className="event-description">{element.description.text}</div>
+          <a href={element.url} className="check-button">
+            CHECK TICKET NOW
+          </a>
         </div>
       );
     });
@@ -37,7 +40,7 @@ class EventsMain extends Component {
     return (
       <div>
         {" "}
-        <div className="mission-box">Codemates Events</div>
+        <div className="mission-box">ONGOING EVENETS</div>
         <div>{eventList}</div>
       </div>
     );

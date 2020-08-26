@@ -1,0 +1,18 @@
+.post-background {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15vh;
+}
+
+.newpost-button {
+  width: 5vh;
+  height: 5vh;
+  margin: auto;
+  margin-top: 3vh;
+  border: 2px;
+}
+
+.newpost-T {
+  font-weight: bold;
+  margin-top: 5vh;
+}

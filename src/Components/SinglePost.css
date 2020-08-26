@@ -1,0 +1,54 @@
+.post-box {
+  position: relative;
+  width: 40vw;
+  /* height: 58vh; */
+  margin: auto;
+  background-color: rgb(253, 187, 43);
+  margin-top: 5vh;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.newpost-content {
+  width: 30vw;
+  height: 6vh;
+  margin: auto;
+  border-radius: 10px;
+}
+.newpost-header-image {
+  width: 80vw;
+  margin: auto;
+  margin-top: 15vh;
+}
+.post-input {
+  width: 30vw;
+  height: 3vh;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.newpost-title {
+  width: 30vw;
+  margin: auto;
+  text-align: left;
+  font-size: 2vh;
+  margin-top: 1vh;
+}
+
+.post-submit {
+  position: relative;
+  height: 4.5vh;
+  width: 6vw;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.addImage {
+  position: relative;
+  height: 27vh;
+  margin: auto;
+}

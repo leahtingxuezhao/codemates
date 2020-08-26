@@ -1,0 +1,79 @@
+.auth-box {
+  margin: auto;
+  width: 55vw;
+  height: 60vh;
+  margin-top: 20vh;
+  display: flex;
+}
+
+.login-box {
+  width: 23vw;
+  height: 65vh;
+  /* background-color: rgb(255, 175, 2); */
+  background-color: rgb(253, 187, 43);
+  border-radius: 20px;
+  box-shadow: 10px 15px 1px 10px rgb(133, 164, 250);
+}
+
+.register-box {
+  margin-left: 3vw;
+  width: 32vw;
+  height: 65vh;
+  /* background-color: rgb(178, 144, 255); */
+  background-color: rgb(133, 164, 250);
+  border-radius: 20px;
+  box-shadow: 10px 15px 1px 10px rgb(253, 187, 43);
+}
+
+/* rgb(124, 159, 255); */
+.auth-title {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.auth-small-title {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.authInputBox {
+  display: flex;
+  margin-top: 3vh;
+}
+
+.auth-input-box {
+  margin-top: 1vh;
+}
+
+.auth-input {
+  margin-top: 1vh;
+  width: 12vw;
+  height: 2.5vh;
+  border-radius: 3px;
+  border: none;
+}
+
+.auth-button {
+  margin-top: 3vh;
+  width: 7vw;
+  height: 3.5vh;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: rgb(133, 164, 250);
+  color: white;
+  border-radius: 5px;
+  border: 2px;
+}
+.auth-button-B {
+  margin-top: 3vh;
+  width: 7vw;
+  height: 3.5vh;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: rgb(253, 187, 43);
+  color: white;
+  border-radius: 5px;
+  border: 2px;
+}
